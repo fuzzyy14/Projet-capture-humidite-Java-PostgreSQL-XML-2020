@@ -14,7 +14,7 @@ http://normandie.services/humidite/mobile/apercu
 http://normandie.services/humidite/mobile/alerte
 
 
-XML-JOUR	-------------------------------------------------
+/*XML-JOUR	-------------------------------------------------
 
 <humidite>
 	<bureau>
@@ -201,4 +201,4 @@ XML-ALERTEMOBILE  -------------------------------------------------
 		<seuil>80</seuil>
 	</mobile>
 </humidite>
-
+*/
