@@ -24,7 +24,7 @@ import outil.JournalDesactivable;
 
 
 public class jourDAO {
-	String xml = "";
+	protected String xml = "";
 	
 	public String recupHumiditeJour() {
 		//lecture
@@ -37,18 +37,18 @@ public class jourDAO {
 			InputStream flux = urlListePensees.openConnection().getInputStream();
 			Scanner lecteur = new Scanner(flux);
 			lecteur.useDelimiter(derniereBalise);
-			xml = lecteur.next() + derniereBalise;
+			this.xml = lecteur.next() + derniereBalise;
 			lecteur.close();
-			xml = new String(xml.getBytes("UTF-8"), "ISO-8859-1");
+			this.xml = new String(this.xml.getBytes("UTF-8"), "ISO-8859-1");
 			
 		}
 		catch (IOException e1) {
 			e1.printStackTrace();
 		}
-		System.out.println(xml);
+		System.out.println(this.xml);
 		
 
-		return xml;
+		return this.xml;
 	}
 	
 	public List<HumiditeJour> DecoderXMLJour() {
@@ -60,12 +60,12 @@ public class jourDAO {
 		{
 			DocumentBuilder parseur = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 			@SuppressWarnings("deprecation")
-			Document document = parseur.parse(new StringBufferInputStream(xml));
+			Document document = parseur.parse(new StringBufferInputStream(this.xml));
 			String racine = document.getDocumentElement().getNodeName();
 			Journal.ecrire(3, "Racine=" + racine);
 					
 			NodeList listeNoeudsHumiditeJour = document.getElementsByTagName("heure");
-			for(int position = 0; position < listeNoeudsHumiditeJour.getLength(); position++)// TODO : veille sur s'il devient iterable
+			for(int position = 0; position < listeNoeudsHumiditeJour.getLength(); position++)
 			{
 				//Node noeudPensee = listePensees.item(position);
 				Element noeudHumiditeJour = (Element)listeNoeudsHumiditeJour.item(position);
