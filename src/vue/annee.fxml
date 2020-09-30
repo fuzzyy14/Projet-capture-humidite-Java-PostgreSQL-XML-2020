@@ -104,7 +104,7 @@
          <children>
             <Pane layoutX="54.0" layoutY="128.0" prefHeight="152.0" prefWidth="298.0">
                <children>
-                  <Label layoutX="20.0" layoutY="21.0" styleClass="apercu-titre" text="TEMPÉRATURE MOYENNE" textFill="#9a9a9a">
+                  <Label layoutX="20.0" layoutY="21.0" styleClass="apercu-titre" text="TEMPÉRATURE MOYENNE COCO" textFill="#9a9a9a">
                      <font>
                         <Font name="Segoe UI Bold" size="12.0" />
                      </font>
@@ -277,7 +277,7 @@
       </Pane>
    </children>
    <stylesheets>
-      <URL value="@decoration/captures.css" />
-      <URL value="@decoration/captures-c.css" />
+      <URL value="@decoration/annee.css" />
+      <URL value="@decoration/annee-c.css" />
    </stylesheets>
 </AnchorPane>
