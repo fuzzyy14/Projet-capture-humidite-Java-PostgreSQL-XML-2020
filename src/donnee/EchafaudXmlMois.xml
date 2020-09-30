@@ -2,40 +2,40 @@
 
 <humidite>
 	<bureau>
-		<jour>
+		<mois>
 			<min>12</min>
-		<moyenne>84</moyenne>	
-		<max>8%</max>	
-			<heure>
+		<moyenne>48</moyenne>	
+		<max>84</max>	
+			<jour>
 				<valeur>1</valeur>
 				<min>12</min>
 			<moyenne>84</moyenne>	
 			<max>84</max>	
-</heure>
-<heure>
+</jour>
+<jour>
 				<valeur>2</valeur>
 				<min>12</min>
 			<moyenne>84</moyenne>	
 			<max>84</max>	
-</heure>	
-<heure>
+</jour>	
+<jour>
 				<valeur>3</valeur>
 				<min>12</min>
 			<moyenne>84</moyenne>	
 			<max>84</max>	
-</heure>
-<heure>
-				<valeur>4</valeur>
+</jour>
+<jour>
+				<valeur>04</valeur>
 				<min>12</min>
 			<moyenne>84</moyenne>	
 			<max>84</max>	
-</heure>
-<heure>
-				<valeur>5</valeur>
+</jour>
+<jour>
+				<valeur>05</valeur>
 				<min>12</min>
 			<moyenne>84</moyenne>	
 			<max>84</max>	
-</heure>	
-		</jour>
+</jour>	
+		</mois>
 	</bureau>
 </humidite>
