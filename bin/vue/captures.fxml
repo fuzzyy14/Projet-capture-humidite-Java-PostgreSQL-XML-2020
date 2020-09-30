@@ -267,7 +267,7 @@
                   <Image url="@decoration/satistiques.png" />
                </image>
             </ImageView>
-            <Label layoutX="128.0" layoutY="39.0" text="Statistiques Capteurs de la forêt" textFill="#fff7f7">
+            <Label layoutX="128.0" layoutY="39.0" text="Le Taux d'humidité en Normandie" textFill="#fff7f7">
                <font>
                   <Font name="Josefin Sans Thin" size="48.0" />
                </font>

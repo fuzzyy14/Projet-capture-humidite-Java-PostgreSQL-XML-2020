@@ -32,5 +32,23 @@ public class VueAnnee extends Vue {
 			controleur.clicAccueil();
 			}
 		});
+
+		Button actionJournee = (Button)lookup("#menu-journee");
+		
+		actionJournee.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent e) {
+			controleur.clicJournee();
+			}
+		});
+
+		Button actionMois = (Button)lookup("#menu-mois");
+		
+		actionMois.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent e) {
+			controleur.clicMois();
+			}
+		});
 	}
 }

@@ -104,7 +104,7 @@
          <children>
             <Pane layoutX="54.0" layoutY="128.0" prefHeight="152.0" prefWidth="298.0">
                <children>
-                  <Label layoutX="20.0" layoutY="21.0" styleClass="apercu-titre" text="TEMPÉRATURE MOYENNE COCO" textFill="#9a9a9a">
+                  <Label layoutX="20.0" layoutY="21.0" styleClass="apercu-titre" text="TEMPÉRATURE MOYENNE" textFill="#9a9a9a">
                      <font>
                         <Font name="Segoe UI Bold" size="12.0" />
                      </font>
@@ -267,7 +267,7 @@
                   <Image url="@decoration/satistiques.png" />
                </image>
             </ImageView>
-            <Label layoutX="128.0" layoutY="39.0" text="Statistiques Capteurs de la forêt" textFill="#fff7f7">
+            <Label layoutX="128.0" layoutY="39.0" text="Humidité cette année" textFill="#fff7f7">
                <font>
                   <Font name="Josefin Sans Thin" size="48.0" />
                </font>
