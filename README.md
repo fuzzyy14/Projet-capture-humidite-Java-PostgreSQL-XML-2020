@@ -19,38 +19,38 @@ XML-JOUR	-------------------------------------------------
 <humidite>
 	<bureau>
 		<jour>
-			<min>12%</min>
-		<moyenne>84%</moyenne>	
-		<max>84%</max>	
+			<min>12</min>
+		<moyenne>84</moyenne>	
+		<max>84</max>	
 			<heure>
-				<valeur>01h00</valeur>
-				<min>12%</min>
-			<moyenne>84%</moyenne>	
-			<max>84%</max>	
+				<valeur>1</valeur>
+				<min>12</min>
+			<moyenne>84</moyenne>	
+			<max>84</max>	
 </heure>
 <heure>
-				<valeur>02h00</valeur>
-				<min>12%</min>
-			<moyenne>84%</moyenne>	
-			<max>84%</max>	
+				<valeur>2</valeur>
+				<min>12</min>
+			<moyenne>84</moyenne>	
+			<max>84</max>	
 </heure>	
 <heure>
-				<valeur>03h00</valeur>
-				<min>12%</min>
-			<moyenne>84%</moyenne>	
-			<max>84%</max>	
+				<valeur>3</valeur>
+				<min>12</min>
+			<moyenne>84</moyenne>	
+			<max>84</max>	
 </heure>
 <heure>
-				<valeur>04h00</valeur>
-				<min>12%</min>
-			<moyenne>84%</moyenne>	
-			<max>84%</max>	
+				<valeur>4</valeur>
+				<min>12</min>
+			<moyenne>84</moyenne>	
+			<max>84</max>	
 </heure>
 <heure>
-				<valeur>05h00</valeur>
-				<min>12%</min>
-			<moyenne>84%</moyenne>	
-			<max>84%</max>	
+				<valeur>5</valeur>
+				<min>12</min>
+			<moyenne>84</moyenne>	
+			<max>84</max>	
 </heure>	
 		</jour>
 	</bureau>
@@ -62,38 +62,38 @@ XML-MOIS -------------------------------------------------
 <humidite>
 	<bureau>
 		<mois>
-			<min>12%</min>
-		<moyenne>84%</moyenne>	
-		<max>84%</max>	
+			<min>12</min>
+		<moyenne>48</moyenne>	
+		<max>84</max>	
 			<jour>
-				<valeur>01</valeur>
-				<min>12%</min>
-			<moyenne>84%</moyenne>	
-			<max>84%</max>	
+				<valeur>1</valeur>
+				<min>12</min>
+			<moyenne>84</moyenne>	
+			<max>84</max>	
 </jour>
 <jour>
-				<valeur>02</valeur>
-				<min>12%</min>
-			<moyenne>84%</moyenne>	
-			<max>84%</max>	
+				<valeur>2</valeur>
+				<min>12</min>
+			<moyenne>84</moyenne>	
+			<max>84</max>	
 </jour>	
 <jour>
-				<valeur>03</valeur>
-				<min>12%</min>
-			<moyenne>84%</moyenne>	
-			<max>84%</max>	
+				<valeur>3</valeur>
+				<min>12</min>
+			<moyenne>84</moyenne>	
+			<max>84</max>	
 </jour>
 <jour>
 				<valeur>04</valeur>
-				<min>12%</min>
-			<moyenne>84%</moyenne>	
-			<max>84%</max>	
+				<min>12</min>
+			<moyenne>84</moyenne>	
+			<max>84</max>	
 </jour>
 <jour>
 				<valeur>05</valeur>
-				<min>12%</min>
-			<moyenne>84%</moyenne>	
-			<max>84%</max>	
+				<min>12</min>
+			<moyenne>84</moyenne>	
+			<max>84</max>	
 </jour>	
 		</mois>
 	</bureau>
@@ -106,76 +106,76 @@ XML-ANNEES -------------------------------------------------
 	<bureau>
 		<annee>
 			<mois>
-<valeur>Janvier</valeur>
-				<min>12%</min>
-<moyenne>84%</moyenne>
-				<max>84%</max>
+				<valeur>1</valeur>
+				<min>12</min>
+				<moyenne>84</moyenne>
+				<max>84</max>
 </mois>
 			<mois>
-<valeur>Février</valeur>
-				<min>12%</min>
-<moyenne>84%</moyenne>
-				<max>84%</max>
+				<valeur>2</valeur>
+				<min>12</min>
+				<moyenne>84</moyenne>
+				<max>84</max>
 </mois>
 			<mois>
-<valeur>Mars</valeur>
-				<min>12%</min>
-<moyenne>84%</moyenne>
-				<max>84%</max>
+				<valeur>3</valeur>
+				<min>1</min>
+				<moyenne>84</moyenne>
+				<max>84</max>
 </mois>
 			<mois>
-<valeur>Avril</valeur>
-				<min>12%</min>
-<moyenne>84%</moyenne>
-				<max>84%</max>
+				<valeur>4</valeur>
+				<min>12</min>
+				<moyenne>84</moyenne>
+				<max>84</max>
 </mois>
 			<mois>
-<valeur>Mai</valeur>
-				<min>12%</min>
-<moyenne>84%</moyenne>
-				<max>84%</max>
+				<valeur>5</valeur>
+				<min>12</min>
+				<moyenne>84</moyenne>
+				<max>84</max>
 </mois>
 			<mois>
-<valeur>Juin</valeur>
-				<min>12%</min>
-<moyenne>84%</moyenne>
-				<max>84%</max>
+				<valeur>6</valeur>
+				<min>12</min>
+				<moyenne>84</moyenne>
+				<max>84</max>
 </mois>
 			<mois>
-<valeur>Juillet</valeur>
-				<min>12%</min>
-<moyenne>84%</moyenne>
-				<max>84%</max>
+				<valeur>7</valeur>
+				<min>12</min>
+				<moyenne>84</moyenne>
+				<max>84</max>
 </mois>
 			<mois>
-<valeur>Aout</valeur>
-				<min>12%</min>
-<moyenne>84%</moyenne>
-				<max>84%</max>
+				<valeur>8</valeur>
+				<min>12</min>
+				<moyenne>84</moyenne>
+				<max>84</max>
 </mois>
 			<mois>
-<valeur>Septembre</valeur>
-				<min>12%</min>
-<moyenne>84%</moyenne>
-				<max>84%</max>
+				<valeur>9</valeur>
+				<min>12</min>
+				<moyenne>84</moyenne>
+				<max>84</max>
 </mois>
 			<mois>
-<valeur>Octobre</valeur>
-				<min>12%</min>
-<moyenne>84%</moyenne>
-				<max>84%</max>
+				<valeur>10</valeur>
+				<min>12</min>
+				<moyenne>84</moyenne>
+				<max>84</max>
 </mois>
 			<mois>
-<valeur>Novembre</valeur>
-				<min>12%</min>
-<moyenne>84%</moyenne>
-				<max>84%</max>
+				<valeur>11</valeur>
+				<min>12</min>
+				<moyenne>84</moyenne>
+				<max>84</max>
 </mois>
 			<mois>
-<valeur>Decembre</valeur>
-				<min>12%</min>
-<moyenne>84%</moyenne>
-				<max>84%</max>
+				<valeur>12</valeur>
+				<min>12</min>
+				<moyenne>84</moyenne>
+				<max>84</max>
 </mois>
 		</annee>
 	</bureau>
@@ -188,10 +188,10 @@ XML-APERCUMOBILE  -------------------------------------------------
 <humidite>
 	<mobile>
 		<apercu>
-			<mesureactuelle>64%</mesureactuelle>
+			<mesureactuelle>64</mesureactuelle>
 			<moyenne>
-				<journee>69%</journee>
-				<annee>84%</annee>	
+				<journee>69</journee>
+				<annee>84</annee>	
 			</moyenne>
 		</apercu>
 	</mobile>
