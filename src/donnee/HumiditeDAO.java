@@ -28,7 +28,7 @@ import outil.JournalDesactivable;
 
 public class HumiditeDAO {
 	protected String xml = "";
-	File fichierXML = new File("C:\\Users\\Simon\\git\\devoir-capture-2020-guillaume-esteban-simon\\src\\donnee\\EchafaudXmlJour.xml"); //echafaud fichier xml pour tester
+	
 	
 	public String recupHumidite(String quelHumidite) {
 		//lecture
@@ -67,6 +67,7 @@ public class HumiditeDAO {
 	
 	public List<HumiditeJour> DecoderXMLJour() {
 		// Parsing
+		File fichierXML = new File("C:\\Users\\Simon\\git\\devoir-capture-2020-guillaume-esteban-simon\\src\\donnee\\EchafaudXmlJour.xml"); //echafaud fichier xml pour tester
 		JournalDesactivable.ecrire("decoderListe()");
 		List<HumiditeJour> listeHumiditeJour = new ArrayList<HumiditeJour>();
 
@@ -111,6 +112,7 @@ public class HumiditeDAO {
 	
 	public List<HumiditeAnnee> DecoderXMLAnnee() {
 		// Parsing
+		File fichierXML = new File("C:\\Users\\Simon\\git\\devoir-capture-2020-guillaume-esteban-simon\\src\\donnee\\EchafaudXmlAnnee.xml"); //echafaud fichier xml pour tester
 		JournalDesactivable.ecrire("decoderListe()");
 		List<HumiditeAnnee> listeHumiditeAnnee = new ArrayList<HumiditeAnnee>();
 
@@ -118,15 +120,15 @@ public class HumiditeDAO {
 		{
 			DocumentBuilder parseur = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 			@SuppressWarnings("deprecation")
-			Document document = parseur.parse(new StringBufferInputStream(this.xml));
+			Document document = parseur.parse(fichierXML); //mettre new StringBufferInputStream(this.xml) à la place du fichier xml
 			String racine = document.getDocumentElement().getNodeName();
 			Journal.ecrire(3, "Racine=" + racine);
 					
-			NodeList listeNoeudsHumiditeJour = document.getElementsByTagName("mois");
-			for(int position = 0; position < listeNoeudsHumiditeJour.getLength(); position++)
+			NodeList listeNoeudsHumiditeAnnee = document.getElementsByTagName("mois");
+			for(int position = 0; position < listeNoeudsHumiditeAnnee.getLength(); position++)
 			{
 				//Node noeudPensee = listePensees.item(position);
-				Element noeudHumiditeAnnee = (Element)listeNoeudsHumiditeJour.item(position);
+				Element noeudHumiditeAnnee = (Element)listeNoeudsHumiditeAnnee.item(position);
 				String id = noeudHumiditeAnnee.getElementsByTagName("valeur").item(0).getTextContent();
 				String min = noeudHumiditeAnnee.getElementsByTagName("min").item(0).getTextContent();
 				String moyenne = noeudHumiditeAnnee.getElementsByTagName("moyenne").item(0).getTextContent();
@@ -154,6 +156,7 @@ public class HumiditeDAO {
 	
 	public List<HumiditeMois> DecoderXMLMois() {
 		// Parsing
+		File fichierXML = new File("C:\\Users\\Simon\\git\\devoir-capture-2020-guillaume-esteban-simon\\src\\donnee\\EchafaudXmlMois.xml"); //echafaud fichier xml pour tester
 		JournalDesactivable.ecrire("decoderListe()");
 		List<HumiditeMois> listeHumiditeMois = new ArrayList<HumiditeMois>();
 
@@ -161,15 +164,15 @@ public class HumiditeDAO {
 		{
 			DocumentBuilder parseur = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 			@SuppressWarnings("deprecation")
-			Document document = parseur.parse(new StringBufferInputStream(this.xml));
+			Document document = parseur.parse(fichierXML); //mettre new StringBufferInputStream(this.xml) à la place du fichier xml
 			String racine = document.getDocumentElement().getNodeName();
 			Journal.ecrire(3, "Racine=" + racine);
 					
-			NodeList listeNoeudsHumiditeJour = document.getElementsByTagName("jour");
-			for(int position = 0; position < listeNoeudsHumiditeJour.getLength(); position++)
+			NodeList listeNoeudsHumiditeMois = document.getElementsByTagName("jour");
+			for(int position = 0; position < listeNoeudsHumiditeMois.getLength(); position++)
 			{
 				//Node noeudPensee = listePensees.item(position);
-				Element noeudHumiditeMois = (Element)listeNoeudsHumiditeJour.item(position);
+				Element noeudHumiditeMois = (Element)listeNoeudsHumiditeMois.item(position);
 				String id = noeudHumiditeMois.getElementsByTagName("valeur").item(0).getTextContent();
 				String min = noeudHumiditeMois.getElementsByTagName("min").item(0).getTextContent();
 				String moyenne = noeudHumiditeMois.getElementsByTagName("moyenne").item(0).getTextContent();

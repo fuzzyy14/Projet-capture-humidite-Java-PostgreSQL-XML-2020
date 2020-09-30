@@ -1,5 +1,6 @@
 
 import donnee.HumiditeDAO;
+import donnee.MobileDAO;
 import vue.Fenetre;
 
 public class App {
@@ -8,6 +9,11 @@ public class App {
 		Fenetre.launch(Fenetre.class, parametres);	
 		HumiditeDAO testParsingXML = new HumiditeDAO();
 		testParsingXML.DecoderXMLJour();
+		testParsingXML.DecoderXMLMois();
+		testParsingXML.DecoderXMLAnnee();
+		MobileDAO testParsingMobile = new MobileDAO();
+		testParsingMobile.DecoderXMLAlerteMobile();
+		testParsingMobile.DecoderXMLApercuMobile();
 	}
 
 }
