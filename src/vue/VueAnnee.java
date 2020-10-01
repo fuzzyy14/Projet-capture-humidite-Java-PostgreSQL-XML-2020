@@ -5,6 +5,11 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import controleur.ControleurAnnee;
+import java.util.List;
+import javafx.scene.control.Label;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import modele.HumiditeAnnee;
 
 public class VueAnnee extends Vue {
 
@@ -50,5 +55,23 @@ public class VueAnnee extends Vue {
 			controleur.clicMois();
 			}
 		});
+	}
+
+	public void afficherAnnee(List<HumiditeAnnee> humiditeannees)
+	{
+		Logger.logMsg(Logger.INFO, "VueAnnee.afficherAnnee()");
+		VBox vueHAnnees = (VBox)lookup("#listesemences");
+		vueHAnnees.getChildren().clear();
+		
+		for(HumiditeAnnee humiditeAnnee:humiditeannees) {
+
+			Logger.logMsg(Logger.INFO, "HumiditeAnnee : " + humiditeAnnee.getmin());
+			HBox vueHAnnee = new HBox();
+			vueHAnnee.getStyleClass().add("humiditeAnnee");
+			vueHAnnee.getChildren().add(new Label("ok"));
+			vueHAnnees.getChildren().add(vueHAnnee);
+		}
+		
+		
 	}
 }
