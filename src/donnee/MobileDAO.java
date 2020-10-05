@@ -31,9 +31,9 @@ public class MobileDAO {
 		//lecture
 		String URL_MOBILE = "";
 		switch (quelMobile) {
-        case "alerte":  URL_MOBILE = "INSERER URL ALERTE";
+        case "alerte":  URL_MOBILE = "http://devoircapture.ddns.net/humidite/mobile/alerte";
                  break;
-        case "apercu":  URL_MOBILE = "INSERER URL APERCU";
+        case "apercu":  URL_MOBILE = "http://devoircapture.ddns.net/humidite/mobile/apercu";
 
 
     }
@@ -63,7 +63,7 @@ public class MobileDAO {
 	
 	public List<ApercuMobile> DecoderXMLApercuMobile() {
 		// Parsing
-		File fichierXML = new File("C:\\Users\\Simon\\git\\devoir-capture-2020-guillaume-esteban-simon\\src\\donnee\\EchafaudXmlApercuMobile.xml"); //echafaud fichier xml pour tester
+		//File fichierXML = new File("C:\\Users\\Simon\\git\\devoir-capture-2020-guillaume-esteban-simon\\src\\donnee\\EchafaudXmlApercuMobile.xml"); //echafaud fichier xml pour tester
 		JournalDesactivable.ecrire("decoderListe()");
 		List<ApercuMobile> listeApercuMobile = new ArrayList<ApercuMobile>();
 
@@ -71,7 +71,7 @@ public class MobileDAO {
 		{
 			DocumentBuilder parseur = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 			@SuppressWarnings("deprecation")
-			Document document = parseur.parse(fichierXML); //mettre new StringBufferInputStream(this.xml) à la place du fichier xml
+			Document document = parseur.parse(new StringBufferInputStream(this.xml)); //mettre à la place du fichier xml
 			String racine = document.getDocumentElement().getNodeName();
 			Journal.ecrire(3, "Racine=" + racine);
 					
@@ -104,7 +104,7 @@ public class MobileDAO {
 	
 	public List<AlerteMobile> DecoderXMLAlerteMobile() {
 		// Parsing
-		File fichierXML = new File("C:\\Users\\Simon\\git\\devoir-capture-2020-guillaume-esteban-simon\\src\\donnee\\EchafaudXmlAlerteMobile.xml"); //echafaud fichier xml pour tester
+		//File fichierXML = new File("C:\\Users\\Simon\\git\\devoir-capture-2020-guillaume-esteban-simon\\src\\donnee\\EchafaudXmlAlerteMobile.xml"); //echafaud fichier xml pour tester
 		JournalDesactivable.ecrire("decoderListe()");
 		List<AlerteMobile> listeAlerteMobile = new ArrayList<AlerteMobile>();
 
@@ -112,7 +112,7 @@ public class MobileDAO {
 		{
 			DocumentBuilder parseur = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 			@SuppressWarnings("deprecation")
-			Document document = parseur.parse(fichierXML); //mettre new StringBufferInputStream(this.xml) à la place du fichier xml
+			Document document = parseur.parse(new StringBufferInputStream(this.xml)); //mettre à la place du fichier xml
 			String racine = document.getDocumentElement().getNodeName();
 			Journal.ecrire(3, "Racine=" + racine);
 					
