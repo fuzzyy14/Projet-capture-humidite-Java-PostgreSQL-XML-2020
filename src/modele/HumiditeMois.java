@@ -1,26 +1,26 @@
 package modele;
 
-public class HumiditeAnnee {
+public class HumiditeMois {
 	
-	protected int idQuelMois;
+	protected int idQuelJour;
 	protected int min;
 	protected int max;
 	protected int moy;
 	
 	
-	public HumiditeAnnee(String id,String min, String max, String moy) {
+	public HumiditeMois(String id,String min, String max, String moy) {
 		super();
-		this.idQuelMois = Integer.parseInt(id);
+		this.idQuelJour = Integer.parseInt(id);
 		this.min = Integer.parseInt(min);
 		this.max = Integer.parseInt(max);
 		this.moy = Integer.parseInt(moy);
 	}
 	
 	public int getId() {
-		return idQuelMois;
+		return idQuelJour;
 	}
 	public void setId(int idQuelHeure) {
-		this.idQuelMois = idQuelHeure;
+		this.idQuelJour = idQuelHeure;
 	}
 	public int getmin() {
 		return min;

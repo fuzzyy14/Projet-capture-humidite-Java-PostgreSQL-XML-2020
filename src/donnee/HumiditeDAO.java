@@ -19,8 +19,8 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import modele.HumiditeAnnee;
-//import modele.HumiditeJour;
-//import modele.HumiditeMois;
+import modele.HumiditeJour;
+import modele.HumiditeMois;
 import outil.Journal;
 import outil.JournalDesactivable;
 
@@ -34,11 +34,11 @@ public class HumiditeDAO {
 		//lecture
 		String URL_HUMIDITE = "";
 		switch (quelHumidite) {
-        case "jour":  URL_HUMIDITE = "INSERER URL HUMIDITE JOUR";
+        case "jour":  URL_HUMIDITE = "http://devoircapture.ddns.net/humidite/bureau/jour";
                  break;
-        case "mois":  URL_HUMIDITE = "INSERER URL HUMIDITE MOIS";
+        case "mois":  URL_HUMIDITE = "http://devoircapture.ddns.net/humidite/bureau/mois";
                  break;
-        case "annee":  URL_HUMIDITE = "INSERER URL HUMIDITE ANNEE";
+        case "annee":  URL_HUMIDITE = "http://devoircapture.ddns.net/humidite/bureau/annee";
 
     }
 		
@@ -65,10 +65,9 @@ public class HumiditeDAO {
 		return this.xml;
 	}
 	
-	/*
 	public List<HumiditeJour> DecoderXMLJour() {
 		// Parsing
-		File fichierXML = new File("C:\\Users\\Simon\\git\\devoir-capture-2020-guillaume-esteban-simon\\src\\donnee\\EchafaudXmlJour.xml"); //echafaud fichier xml pour tester
+		//File fichierXML = new File("C:\\Users\\Simon\\git\\devoir-capture-2020-guillaume-esteban-simon\\src\\donnee\\EchafaudXmlJour.xml"); //echafaud fichier xml pour tester
 		JournalDesactivable.ecrire("decoderListe()");
 		List<HumiditeJour> listeHumiditeJour = new ArrayList<HumiditeJour>();
 
@@ -76,7 +75,7 @@ public class HumiditeDAO {
 		{
 			DocumentBuilder parseur = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 			@SuppressWarnings("deprecation")
-			Document document = parseur.parse(fichierXML); //mettre new StringBufferInputStream(this.xml) à la place du fichier xml
+			Document document = parseur.parse(new StringBufferInputStream(this.xml)); //mettre à la place du fichier xml
 			String racine = document.getDocumentElement().getNodeName();
 			Journal.ecrire(3, "Racine=" + racine);
 					
@@ -107,11 +106,13 @@ public class HumiditeDAO {
 			e.printStackTrace();
 		}		
 		return listeHumiditeJour;
-	}*/
+	}
+	
+	
 	
 	public List<HumiditeAnnee> DecoderXMLAnnee() {
 		// Parsing
-		File fichierXML = new File("C:\\Users\\Simon\\git\\devoir-capture-2020-guillaume-esteban-simon\\src\\donnee\\EchafaudXmlAnnee.xml"); //echafaud fichier xml pour tester
+		//File fichierXML = new File("C:\\Users\\Simon\\git\\devoir-capture-2020-guillaume-esteban-simon\\src\\donnee\\EchafaudXmlAnnee.xml"); //echafaud fichier xml pour tester
 		JournalDesactivable.ecrire("decoderListe()");
 		List<HumiditeAnnee> listeHumiditeAnnee = new ArrayList<HumiditeAnnee>();
 
@@ -119,7 +120,7 @@ public class HumiditeDAO {
 		{
 			DocumentBuilder parseur = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 			@SuppressWarnings("deprecation")
-			Document document = parseur.parse(fichierXML); //mettre new StringBufferInputStream(this.xml) à la place du fichier xml
+			Document document = parseur.parse(new StringBufferInputStream(this.xml)); //mettre à la place du fichier xml
 			String racine = document.getDocumentElement().getNodeName();
 			Journal.ecrire(3, "Racine=" + racine);
 					
@@ -152,10 +153,10 @@ public class HumiditeDAO {
 		return listeHumiditeAnnee;
 	}
 	
-	/*
+	
 	public List<HumiditeMois> DecoderXMLMois() {
 		// Parsing
-		File fichierXML = new File("C:\\Users\\Simon\\git\\devoir-capture-2020-guillaume-esteban-simon\\src\\donnee\\EchafaudXmlMois.xml"); //echafaud fichier xml pour tester
+		//File fichierXML = new File("C:\\Users\\Simon\\git\\devoir-capture-2020-guillaume-esteban-simon\\src\\donnee\\EchafaudXmlMois.xml"); //echafaud fichier xml pour tester
 		JournalDesactivable.ecrire("decoderListe()");
 		List<HumiditeMois> listeHumiditeMois = new ArrayList<HumiditeMois>();
 
@@ -163,7 +164,7 @@ public class HumiditeDAO {
 		{
 			DocumentBuilder parseur = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 			@SuppressWarnings("deprecation")
-			Document document = parseur.parse(fichierXML); //mettre new StringBufferInputStream(this.xml) à la place du fichier xml
+			Document document = parseur.parse(new StringBufferInputStream(this.xml)); //mettre à la place du fichier xml
 			String racine = document.getDocumentElement().getNodeName();
 			Journal.ecrire(3, "Racine=" + racine);
 					
@@ -194,7 +195,7 @@ public class HumiditeDAO {
 			e.printStackTrace();
 		}		
 		return listeHumiditeMois;
-	}*/
+	}
 	
 	
 
