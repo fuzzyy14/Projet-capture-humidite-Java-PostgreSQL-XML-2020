@@ -1,9 +1,15 @@
 package vue;
+import java.util.List;
+
 import com.sun.media.jfxmedia.logging.Logger;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
+import modele.HumiditeJour;
+import outil.Journal;
 import controleur.ControleurJournee;
 
 public class VueJournee extends Vue {
@@ -50,5 +56,27 @@ public class VueJournee extends Vue {
 			controleur.clicAnnee();
 			}
 		});
+	}
+
+	public void afficherJour(List<HumiditeJour> LHJ)
+	{		
+		Journal.ecrire(3, "Etape void afficher");
+		
+		for(HumiditeJour hj: LHJ) {
+
+			Logger.logMsg(Logger.INFO, "HumiditeJour : " + hj.getId());
+			System.out.println(hj.getId());
+			
+			Journal.ecrire(3, "Etape humidite for 2");
+			
+			VBox vueHJourM = (VBox)lookup("#vb-heure");
+			VBox vueHJourMin = (VBox)lookup("#vb-min");
+			VBox vueHJourMax = (VBox)lookup("#vb-max");
+			VBox vueHJourMoy = (VBox)lookup("#vb-moy");
+			vueHJourM.getChildren().add(new Label (Integer.toString(hj.getId())));
+			vueHJourMin.getChildren().add(new Label (Integer.toString(hj.getMin())));
+			vueHJourMax.getChildren().add(new Label (Integer.toString(hj.getMax())));
+			vueHJourMoy.getChildren().add(new Label (Integer.toString(hj.getMoy())));
+		}
 	}
 }

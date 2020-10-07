@@ -1,10 +1,16 @@
 package vue;
+import java.util.List;
+
 import com.sun.media.jfxmedia.logging.Logger;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
+import outil.Journal;
 import controleur.ControleurMois;
+import modele.HumiditeMois;
 
 public class VueMois extends Vue {
 
@@ -50,5 +56,25 @@ public class VueMois extends Vue {
 			controleur.clicAnnee();
 			}
 		});
+	}
+
+	public void afficherMois(List<HumiditeMois> LHM)
+	{		
+		Journal.ecrire(3, "Etape void afficher");
+		
+		for(HumiditeMois hm: LHM) {
+
+			Logger.logMsg(Logger.INFO, "HumiditeMois : " + hm.getId());
+			System.out.println(hm.getId());
+			
+			VBox vueVM = (VBox)lookup("#vb-jour");
+			VBox vueVMin = (VBox)lookup("#vb-min");
+			VBox vueVMax = (VBox)lookup("#vb-max");
+			VBox vueVMoy = (VBox)lookup("#vb-moy");
+			vueVM.getChildren().add(new Label (Integer.toString(hm.getId())));
+			vueVMin.getChildren().add(new Label (Integer.toString(hm.getMin())));
+			vueVMax.getChildren().add(new Label (Integer.toString(hm.getMax())));
+			vueVMoy.getChildren().add(new Label (Integer.toString(hm.getMoy())));
+		}
 	}
 }

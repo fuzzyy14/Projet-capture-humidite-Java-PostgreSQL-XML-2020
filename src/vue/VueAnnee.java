@@ -5,11 +5,12 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import controleur.ControleurAnnee;
+
 import java.util.List;
 import javafx.scene.control.Label;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import modele.HumiditeAnnee;
+import outil.Journal;
 
 public class VueAnnee extends Vue {
 
@@ -29,6 +30,8 @@ public class VueAnnee extends Vue {
 	public void activerControles()
 	{
 		super.activerControles();
+		Journal.ecrire(3, "Etape controles1");
+
 		Button actionAccueil = (Button)lookup("#menu-accueil");
 		
 		actionAccueil.setOnAction(new EventHandler<ActionEvent>() {
@@ -57,21 +60,34 @@ public class VueAnnee extends Vue {
 		});
 	}
 
-	public void afficherAnnee(List<HumiditeAnnee> humiditeannees)
-	{
-		Logger.logMsg(Logger.INFO, "VueAnnee.afficherAnnee()");
-		VBox vueHAnnees = (VBox)lookup("#listesemences");
-		vueHAnnees.getChildren().clear();
+	public void afficherAnnee(List<HumiditeAnnee> LHA)
+	{		
+		Journal.ecrire(3, "Etape void afficher");
+		/*
+		for(HumiditeAnnee ha : LHA) {
+			System.out.println(ha.getId());
+			Journal.ecrire(3, "Etape humidite for 2");
+			HBox vueHAnneeMin = (HBox)lookup("#hb-min");
+			vueHAnneeMin.getStyleClass().add(ha.getMin()+"");
+			vueHAnneeMin.getChildren().add(new Label ("Min"));
+			vueHAnnees.getChildren().add(vueHAnneeMin);
+		}*/
 		
-		for(HumiditeAnnee humiditeAnnee:humiditeannees) {
+		for(HumiditeAnnee ha: LHA) {
 
-			Logger.logMsg(Logger.INFO, "HumiditeAnnee : " + humiditeAnnee.getmin());
-			HBox vueHAnnee = new HBox();
-			vueHAnnee.getStyleClass().add("humiditeAnnee");
-			vueHAnnee.getChildren().add(new Label("ok"));
-			vueHAnnees.getChildren().add(vueHAnnee);
+			Logger.logMsg(Logger.INFO, "HumiditeAnnee : " + ha.getId());
+			System.out.println(ha.getId());
+			
+			Journal.ecrire(3, "Etape humidite for 2");
+			
+			VBox vueHAnneeM = (VBox)lookup("#vb-mois");
+			VBox vueHAnneeMin = (VBox)lookup("#vb-min");
+			VBox vueHAnneeMax = (VBox)lookup("#vb-max");
+			VBox vueHAnneeMoy = (VBox)lookup("#vb-moy");
+			vueHAnneeM.getChildren().add(new Label (Integer.toString(ha.getId())));
+			vueHAnneeMin.getChildren().add(new Label (Integer.toString(ha.getMin())));
+			vueHAnneeMax.getChildren().add(new Label (Integer.toString(ha.getMax())));
+			vueHAnneeMoy.getChildren().add(new Label (Integer.toString(ha.getMoy())));
 		}
-		
-		
 	}
 }

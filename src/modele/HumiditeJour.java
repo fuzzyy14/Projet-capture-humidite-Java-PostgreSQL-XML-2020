@@ -22,7 +22,7 @@ public class HumiditeJour {
 	public void setId(int idQuelHeure) {
 		this.idQuelHeure = idQuelHeure;
 	}
-	public int getmin() {
+	public int getMin() {
 		return min;
 	}
 	public void setMin(int min) {
