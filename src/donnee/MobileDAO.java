@@ -141,12 +141,11 @@ public class MobileDAO {
 		return listeAlerteMobile;
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> origin/master
-=======
-}
->>>>>>> f920021... ajout vues fonctionnelles
+
+
+
+
+
+
