@@ -27,7 +27,7 @@ public class ControleurCaptures extends Controleur{
 	public void clicJournee()
 	{
 		Navigateur.getInstance().afficherVue(VueMois.getInstance());
-		
+			
 		HumiditeDAO HDAO = new HumiditeDAO();
 		HDAO.recupHumidite("mois");
 		List<HumiditeJour> HJour = HDAO.DecoderXMLJour();
