@@ -61,7 +61,14 @@ public class VueJournee extends Vue {
 	public void afficherJour(List<HumiditeJour> LHJ)
 	{		
 		Journal.ecrire(3, "Etape void afficher");
-		
+		VBox vueHJourM = (VBox)lookup("#vb-heure");
+		VBox vueHJourMin = (VBox)lookup("#vb-min");
+		VBox vueHJourMax = (VBox)lookup("#vb-max");
+		VBox vueHJourMoy = (VBox)lookup("#vb-moy");
+		vueHJourMoy.getChildren().clear();
+		vueHJourM.getChildren().clear();
+		vueHJourMin.getChildren().clear();
+		vueHJourMax.getChildren().clear();
 		for(HumiditeJour hj: LHJ) {
 
 			Logger.logMsg(Logger.INFO, "HumiditeJour : " + hj.getId());
@@ -69,10 +76,7 @@ public class VueJournee extends Vue {
 			
 			Journal.ecrire(3, "Etape humidite for 2");
 			
-			VBox vueHJourM = (VBox)lookup("#vb-heure");
-			VBox vueHJourMin = (VBox)lookup("#vb-min");
-			VBox vueHJourMax = (VBox)lookup("#vb-max");
-			VBox vueHJourMoy = (VBox)lookup("#vb-moy");
+			
 			vueHJourM.getChildren().add(new Label (Integer.toString(hj.getId())));
 			vueHJourMin.getChildren().add(new Label (Integer.toString(hj.getMin())));
 			vueHJourMax.getChildren().add(new Label (Integer.toString(hj.getMax())));

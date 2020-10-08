@@ -61,16 +61,20 @@ public class VueMois extends Vue {
 	public void afficherMois(List<HumiditeMois> LHM)
 	{		
 		Journal.ecrire(3, "Etape void afficher");
-		
+		VBox vueVM = (VBox)lookup("#vb-jour");
+		VBox vueVMin = (VBox)lookup("#vb-min");
+		VBox vueVMax = (VBox)lookup("#vb-max");
+		VBox vueVMoy = (VBox)lookup("#vb-moy");
+		vueVM.getChildren().clear();
+		vueVMin.getChildren().clear();
+		vueVMax.getChildren().clear();
+		vueVMoy.getChildren().clear();
 		for(HumiditeMois hm: LHM) {
 
 			Logger.logMsg(Logger.INFO, "HumiditeMois : " + hm.getId());
 			System.out.println(hm.getId());
 			
-			VBox vueVM = (VBox)lookup("#vb-jour");
-			VBox vueVMin = (VBox)lookup("#vb-min");
-			VBox vueVMax = (VBox)lookup("#vb-max");
-			VBox vueVMoy = (VBox)lookup("#vb-moy");
+			
 			vueVM.getChildren().add(new Label (Integer.toString(hm.getId())));
 			vueVMin.getChildren().add(new Label (Integer.toString(hm.getMin())));
 			vueVMax.getChildren().add(new Label (Integer.toString(hm.getMax())));

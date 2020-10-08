@@ -32,7 +32,7 @@ public class ControleurAnnee extends Controleur{
 		Navigateur.getInstance().afficherVue(VueJournee.getInstance());
 		
 		HumiditeDAO HDAO = new HumiditeDAO();
-		HDAO.recupHumidite("mois");
+		HDAO.recupHumidite("jour");
 		List<HumiditeJour> HJour = HDAO.DecoderXMLJour();
 		VueJournee.getInstance().afficherJour(HJour);	
 	}
