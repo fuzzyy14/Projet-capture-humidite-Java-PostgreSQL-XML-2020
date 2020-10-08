@@ -10,7 +10,9 @@
     $dsn = 'pgsql:dbname='.$base.';host=' . $hote;
     $basededonnees = new PDO($dsn, $usager, $motdepasse);
 
-    $SQL_LISTE_HUMIDITE = "SELECT * FROM humidite";
+    //$SQL_LISTE_HUMIDITE = "SELECT * FROM humidite";
+    $SQL_LISTE_HUMIDITE = "SELECT date_part('hour',moment) as heures, MAX(tauxhumidite) as maximum, MIN(tauxhumidite) as minimum,
+    AVG(tauxhumidite) as moyenne FROM humidite WHERE date_part('day', moment) = date_part('day', moment) GROUP BY date_part('hour',moment)";
     $requete = $basededonnees->prepare($SQL_LISTE_HUMIDITE);
     $requete->execute();
     $humidites = $requete->fetchAll(PDO::FETCH_OBJ);
@@ -42,10 +44,10 @@
     {
 ?>             
                 <heure>
-                    <valeur><?=$humidite->moment[11]?><?=$humidite->moment[12] ?></valeur>
-                    <min>70</min>
-                    <moyenne><?=$humidite->tauxhumidite?></moyenne>  
-                    <max>70</max>  
+                    <valeur><?=$humidite->heures?></valeur>
+                    <min><?=$humidite->minimum?></min>
+                    <moyenne><?=round($humidite->moyenne)?></moyenne>  
+                    <max><?=$humidite->maximum?></max>  
                 </heure>                  
 <?php
     }
