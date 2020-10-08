@@ -8,9 +8,12 @@
     $base = 'normandiemeteo';
 
     $dsn = 'pgsql:dbname='.$base.';host=' . $hote;
-   $basededonnees = new PDO($dsn, $usager, $motdepasse);
+    $basededonnees = new PDO($dsn, $usager, $motdepasse);
 
-    $SQL_LISTE_HUMIDITE = "SELECT * FROM humidite";
+    //$SQL_LISTE_HUMIDITE = "SELECT * FROM humidite";
+    $SQL_LISTE_HUMIDITE = "SELECT date_part('month',moment) as mois, MAX(tauxhumidite) as maximum, MIN(tauxhumidite) as minimum,
+    AVG(tauxhumidite) as moyenne FROM humidite WHERE date_part('year', moment) = date_part('year', moment) 
+    GROUP BY date_part('month',moment)";
     $requete = $basededonnees->prepare($SQL_LISTE_HUMIDITE);
     $requete->execute();
     $humidites = $requete->fetchAll(PDO::FETCH_OBJ);
@@ -28,10 +31,10 @@
     {
 ?>         
                 <mois>
-	                <valeur><?=$humidite->moment[5]?><?=$humidite->moment[6] ?></valeur>
-	                <min>70</min>
-	                <moyenne><?=$humidite->tauxhumidite?></moyenne>  
-	                <max>70</max>  
+	                <valeur><?=$humidite->mois?></valeur>
+	                <min><?=$humidite->minimum?></min>
+	                <moyenne><?=round($humidite->moyenne)?></moyenne>  
+	                <max><?=$humidite->maximum?></max>  
 	            </mois>           
 <?php
     }
