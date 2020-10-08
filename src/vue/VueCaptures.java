@@ -2,6 +2,9 @@ package vue;
 import com.sun.media.jfxmedia.logging.Logger;
 
 import controleur.ControleurCaptures;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.control.Button;
 
 public class VueCaptures extends Vue {
 
@@ -19,18 +22,33 @@ public class VueCaptures extends Vue {
 	public void activerControles()
 	{
 		super.activerControles();
+
+		Button actionJournee = (Button)lookup("#menu-journee");
 		
-		/*
-		Button actionCalculatrice = (Button) lookup("#action-calculatrice");
-		actionCalculatrice.setOnAction(new EventHandler<ActionEvent>() 
-		{
-            @Override public void handle(ActionEvent e) 
-            {
-            	Logger.logMsg(Logger.INFO, "Bouton Calculatrice activé");
-            	controleur.notifierEvenement(ActionNavigation.CALCULATRICE);
-            }
-        });
-		*/
+		actionJournee.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent e) {
+			controleur.clicJournee();
+			}
+		});
+
+		Button actionMois = (Button)lookup("#menu-mois");
+		
+		actionMois.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent e) {
+			controleur.clicMois();
+			}
+		});
+
+		Button actionAnnee = (Button)lookup("#menu-annee");
+		
+		actionAnnee.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent e) {
+			controleur.clicAnnee();
+			}
+		});
 
 	}
 }

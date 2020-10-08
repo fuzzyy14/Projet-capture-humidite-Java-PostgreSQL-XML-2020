@@ -141,4 +141,8 @@ public class MobileDAO {
 		return listeAlerteMobile;
 	}
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/master

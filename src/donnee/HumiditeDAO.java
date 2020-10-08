@@ -67,7 +67,11 @@ public class HumiditeDAO {
 	
 	public List<HumiditeJour> DecoderXMLJour() {
 		// Parsing
+<<<<<<< HEAD
+		//File fichierXML = new File("C:\\Users\\arceu\\git\\devoir-capture-2020-guillaume-esteban-simon\\src\\donnee\\EchafaudXmlJour.xml"); //echafaud fichier xml pour tester
+=======
 		//File fichierXML = new File("C:\\Users\\Simon\\git\\devoir-capture-2020-guillaume-esteban-simon\\src\\donnee\\EchafaudXmlJour.xml"); //echafaud fichier xml pour tester
+>>>>>>> origin/master
 		JournalDesactivable.ecrire("decoderListe()");
 		List<HumiditeJour> listeHumiditeJour = new ArrayList<HumiditeJour>();
 
@@ -112,7 +116,11 @@ public class HumiditeDAO {
 	
 	public List<HumiditeAnnee> DecoderXMLAnnee() {
 		// Parsing
+<<<<<<< HEAD
+		//File fichierXML = new File("C:\\Users\\arceu\\git\\devoir-capture-2020-guillaume-esteban-simon\\src\\donnee\\EchafaudXmlAnnee.xml"); //echafaud fichier xml pour tester
+=======
 		//File fichierXML = new File("C:\\Users\\Simon\\git\\devoir-capture-2020-guillaume-esteban-simon\\src\\donnee\\EchafaudXmlAnnee.xml"); //echafaud fichier xml pour tester
+>>>>>>> origin/master
 		JournalDesactivable.ecrire("decoderListe()");
 		List<HumiditeAnnee> listeHumiditeAnnee = new ArrayList<HumiditeAnnee>();
 
@@ -199,4 +207,8 @@ public class HumiditeDAO {
 	
 	
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/master
