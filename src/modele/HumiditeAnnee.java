@@ -23,7 +23,10 @@ public class HumiditeAnnee {
 		this.idQuelMois = idQuelHeure;
 	}
 	public int getMin() {
+<<<<<<< HEAD
 
+=======
+>>>>>>> f920021... ajout vues fonctionnelles
 		return min;
 	}
 	public void setMin(int min) {
