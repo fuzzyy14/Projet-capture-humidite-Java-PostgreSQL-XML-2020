@@ -1,6 +1,13 @@
-# devoir-capture-2020-guillaume-esteban-simon
-devoir-capture-2020-FuZzyy14 created by GitHub Classroom
- 
+# TUTORIEL INSTALLATION
+
+- En premier temps, il faut installer et configurer XAMPP : https://www.apachefriends.org/fr/download.html
+Note: la version utilisée pour ce projet est celle avec PHP 7.4.15, impossible de garantir le fonctionnement pour PHP 8 et supérieur.
+- Ensuite, il faut placer le dossier service-humidite dans /htdoc , c'est à partir des fichiers contenus dans ce dossier que le service de données peut fonctionner
+- Après il faut installer postgreSQL, suivre ce tuto pour l'installation : https://www.postgresqltutorial.com/install-postgresql/
+Bien cocher la case PGAdmin 4 car cela nous permettera de créer la base de données et de remplir les données.
+
+
+
 Delarue Simon
 Escudero Esteban
 d’Albignac Guillaume
