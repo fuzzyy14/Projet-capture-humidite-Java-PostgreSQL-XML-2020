@@ -15,6 +15,13 @@ Bien cocher la case PGAdmin 4 car cela nous permettera de créer la base de donn
 - Sur PGAdmin, faire la configuration initiale puis créer une base de données nommée "normandiemeteo".
 Ensuite clic droit sur la base de données -> Query Tool puis copiez le code situé dans service-humidite/humidite.sql et collez le dans le Query Editor, puis executez le code avec le bouton Play ou avec la touche F5
 
+- Aller dans /htdoc/service-humidite puis modifier le fichier BaseDeDonnees.php avec 
+$usager = 'nom de votre usager de la base de données sur PGAdmin';
+$motdepasse = 'mot de passe de votre usager de la base de données sur PGAdmin';
+$hote = 'adresse IP de où se situe votre base de données, laissez localhost pour votre propre machine';
+$base = 'nom de la base de données';
+
+FIN DU TUTORIEL
 
 
 Delarue Simon
