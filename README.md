@@ -9,8 +9,11 @@ Note: la version utilisée pour ce projet est celle avec PHP 7.4.15, impossible 
 
 - Placer le dossier "service-humidite" dans /htdoc , c'est à partir des fichiers contenus dans ce dossier que le service de données peut fonctionner
 
-- Installer postgreSQL, suivre ce tuto pour l'installation : https://www.postgresqltutorial.com/install-postgresql/
+- Installer PostgreSQL, suivre ce tuto pour l'installation : https://www.postgresqltutorial.com/install-postgresql/
 Bien cocher la case PGAdmin 4 car cela nous permettera de créer la base de données et de remplir les données.
+
+- Sur PGAdmin, faire la configuration initiale puis créer une base de données nommée "normandiemeteo".
+Ensuite clic droit sur la base de données -> Query Tool puis copiez le code situé dans service-humidite/humidite.sql et collez le dans le Query Editor, puis executez le code avec le bouton Play ou avec la touche F5
 
 
 
