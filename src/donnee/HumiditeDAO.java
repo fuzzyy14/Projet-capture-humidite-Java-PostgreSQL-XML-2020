@@ -34,11 +34,11 @@ public class HumiditeDAO {
 		//lecture
 		String URL_HUMIDITE = "";
 		switch (quelHumidite) {
-        case "jour":  URL_HUMIDITE = "http://devoircapture.ddns.net/humidite/bureau/jour";
+        case "jour":  URL_HUMIDITE = "http://localhost/service-humidite/jour";
                  break;
-        case "mois":  URL_HUMIDITE = "http://devoircapture.ddns.net/humidite/bureau/mois";
+        case "mois":  URL_HUMIDITE = "http://localhost/service-humidite/mois";
                  break;
-        case "annee":  URL_HUMIDITE = "http://devoircapture.ddns.net/humidite/bureau/annee";
+        case "annee":  URL_HUMIDITE = "http://localhost/service-humidite/annee";
 
     }
 		

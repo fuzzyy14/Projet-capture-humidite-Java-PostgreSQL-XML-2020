@@ -31,9 +31,9 @@ public class MobileDAO {
 		//lecture
 		String URL_MOBILE = "";
 		switch (quelMobile) {
-        case "alerte":  URL_MOBILE = "http://devoircapture.ddns.net/humidite/mobile/alerte";
+        case "alerte":  URL_MOBILE = "http://localhost/service-humidite/alerte";
                  break;
-        case "apercu":  URL_MOBILE = "http://devoircapture.ddns.net/humidite/mobile/apercu";
+        case "apercu":  URL_MOBILE = "http://localhost/service-humidite/apercu";
 
 
     }
