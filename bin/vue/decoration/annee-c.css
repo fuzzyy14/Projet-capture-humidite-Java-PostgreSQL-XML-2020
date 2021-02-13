@@ -4,7 +4,7 @@
 }
 #entete
 {
-    -fx-background-color: black;
+    -fx-background-color: #8bc4c9;
 }
 #boite-menu
 {
@@ -42,7 +42,7 @@ Pane.titre Label
 
 .mesure.apercu.jour
 {
-    -fx-background-color:#008000;
+    -fx-background-color:lightgreen;
 }
 .mesure.graphique.jour
 {
