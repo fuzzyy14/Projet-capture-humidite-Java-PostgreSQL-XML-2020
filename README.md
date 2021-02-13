@@ -1,9 +1,15 @@
 # TUTORIEL INSTALLATION
+Le code tourne avec l'IDE Eclipse, OpenJDK 14.0.2 et javafx-sdk-11.0.2
+- Dans l'IDE, faire clic droit sur le projet puis propriétés-> Java Build Path
 
-- En premier temps, il faut installer et configurer XAMPP : https://www.apachefriends.org/fr/download.html
+- Aller dans Libraries et configurer JRE System Library avec OpenJDK 14.0.2 et JavaFX en créant une librairie et ajouter les jars externes compris dans le package téléchargé sur le site officiel de JavaFX
+
+- Installer et configurer XAMPP : https://www.apachefriends.org/fr/download.html
 Note: la version utilisée pour ce projet est celle avec PHP 7.4.15, impossible de garantir le fonctionnement pour PHP 8 et supérieur.
-- Ensuite, il faut placer le dossier service-humidite dans /htdoc , c'est à partir des fichiers contenus dans ce dossier que le service de données peut fonctionner
-- Après il faut installer postgreSQL, suivre ce tuto pour l'installation : https://www.postgresqltutorial.com/install-postgresql/
+
+- Placer le dossier "service-humidite" dans /htdoc , c'est à partir des fichiers contenus dans ce dossier que le service de données peut fonctionner
+
+- Installer postgreSQL, suivre ce tuto pour l'installation : https://www.postgresqltutorial.com/install-postgresql/
 Bien cocher la case PGAdmin 4 car cela nous permettera de créer la base de données et de remplir les données.
 
 
