@@ -5,5 +5,3 @@
     echo '<a href="../service-humidite/apercu.php"> service-humidite/apercu </a><br>';
     echo '<a href="../service-humidite/alerte.php"> service-humidite/alerte </a><br>';
 ?>
-
-

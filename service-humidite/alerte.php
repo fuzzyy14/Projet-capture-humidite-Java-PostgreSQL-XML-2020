@@ -1,14 +1,6 @@
 <?php
-    error_reporting(E_ALL);
-    ini_set('display_errors', 1);
-
-    $usager = 'postgres';
-    $motdepasse = 'motdepasse';
-    $hote = 'localhost';
-    $base = 'normandiemeteo';
-
-    $dsn = 'pgsql:dbname='.$base.';host=' . $hote;
-    $basededonnees = new PDO($dsn, $usager, $motdepasse);
+    require_once "./BaseDeDonnees.php";
+    $basededonnees = BaseDeDonnees::getConnexion();
 
     $SQL_LISTE_HUMIDITE = "SELECT tauxhumidite FROM humidite ORDER BY id ASC LIMIT 1";
     $requete = $basededonnees->prepare($SQL_LISTE_HUMIDITE);

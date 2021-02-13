@@ -1,14 +1,6 @@
 <?php
-    error_reporting(E_ALL);
-    ini_set('display_errors', 1);
-
-    $usager = 'postgres';
-    $motdepasse = 'motdepasse';
-    $hote = 'localhost';
-    $base = 'normandiemeteo';
-
-    $dsn = 'pgsql:dbname='.$base.';host=' . $hote;
-    $basededonnees = new PDO($dsn, $usager, $motdepasse);
+    require_once "./BaseDeDonnees.php";
+    $basededonnees = BaseDeDonnees::getConnexion();
 
     //$SQL_LISTE_HUMIDITE = "SELECT * FROM humidite";
     $SQL_LISTE_HUMIDITE = "SELECT date_part('hour',moment) as heures, MAX(tauxhumidite) as maximum, MIN(tauxhumidite) as minimum,
